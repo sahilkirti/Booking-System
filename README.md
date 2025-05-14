@@ -4,8 +4,8 @@ A full-stack application for booking meeting rooms, built with Flutter for the f
 
 ## Live Demo
 
-- Live Application: [https://booking-system-coral.vercel.app](https://booking-system-coral.vercel.app)
-- API Endpoint: [https://booking-system-coral.vercel.app/api/bookings](https://booking-system-coral.vercel.app/api/bookings)
+- Frontend: [https://sahilkirti.github.io/Booking-System](https://sahilkirti.github.io/Booking-System)
+- Backend API: [https://booking-system-coral.vercel.app/api/bookings](https://booking-system-coral.vercel.app/api/bookings)
 - Deployment Date: May 14, 2024
 
 ## Features
