@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import '../models/booking.dart';
 
 class BookingService {
-  // Updated to use the actual deployed URL
+  // Using the verified working API URL
   static const String baseUrl = 'https://booking-system-coral.vercel.app/api';
 
   Future<List<Booking>> getAllBookings() async {
