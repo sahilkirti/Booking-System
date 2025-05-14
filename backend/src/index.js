@@ -3,10 +3,13 @@ const cors = require('cors');
 const bookingRoutes = require('./routes/bookingRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins for testing
+  methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 // Root path handler
@@ -35,13 +38,13 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start server
-// For local development:
+// Local development server
 if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
 }
 
-// Export the Express API for Vercel serverless function
+// Export the Express app for Vercel
 module.exports = app; 
