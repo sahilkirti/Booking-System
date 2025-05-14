@@ -3,10 +3,8 @@ import 'package:http/http.dart' as http;
 import '../models/booking.dart';
 
 class BookingService {
-  // Replace this with your actual deployed Vercel API URL
-  // For example: static const String baseUrl = 'https://booking-api.vercel.app/api';
-  // For local development, use: http://localhost:3000/api
-  static const String baseUrl = 'https://booking-api.vercel.app/api';
+  // Updated to use the actual deployed URL
+  static const String baseUrl = 'https://booking-system-coral.vercel.app/api';
 
   Future<List<Booking>> getAllBookings() async {
     final response = await http.get(Uri.parse('$baseUrl/bookings'));

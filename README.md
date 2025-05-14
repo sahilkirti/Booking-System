@@ -4,8 +4,8 @@ A full-stack application for booking meeting rooms, built with Flutter for the f
 
 ## Live Demo
 
-- Frontend: [https://booking-app.vercel.app](https://booking-app.vercel.app) (Replace with your actual Vercel frontend URL)
-- Backend API: [https://booking-api.vercel.app](https://booking-api.vercel.app) (Replace with your actual Vercel backend URL)
+- Live Application: [https://booking-system-coral.vercel.app](https://booking-system-coral.vercel.app)
+- API Endpoint: [https://booking-system-coral.vercel.app/api/bookings](https://booking-system-coral.vercel.app/api/bookings)
 
 ## Features
 

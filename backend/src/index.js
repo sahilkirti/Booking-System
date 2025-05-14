@@ -9,6 +9,20 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Root path handler
+app.get('/', (req, res) => {
+  res.json({
+    status: 'success',
+    message: 'Booking API is running',
+    endpoints: {
+      getAllBookings: '/api/bookings',
+      getBookingById: '/api/bookings/:id',
+      createBooking: 'POST /api/bookings',
+      deleteBooking: 'DELETE /api/bookings/:id'
+    }
+  });
+});
+
 // Routes
 app.use('/api/bookings', bookingRoutes);
 
@@ -22,6 +36,12 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-}); 
+// For local development:
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+}
+
+// Export the Express API for Vercel serverless function
+module.exports = app; 
