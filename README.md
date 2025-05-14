@@ -4,7 +4,7 @@ A full-stack application for booking meeting rooms, built with Flutter for the f
 
 ## Live Demo
 
-- Frontend: [https://your-netlify-app-url.netlify.app](https://your-netlify-app-url.netlify.app) (Replace with your actual Netlify URL after deployment)
+- Frontend: [[https://your-netlify-app-url.netlify.app](https://your-netlify-app-url.netlify.app](https://marvelous-bombolone-5e7cf8.netlify.app)) (Replace with your actual Netlify URL after deployment)
 - Backend API: [https://booking-system-coral.vercel.app/api/bookings](https://booking-system-coral.vercel.app/api/bookings)
 - Deployment Date: May 14, 2024
 
