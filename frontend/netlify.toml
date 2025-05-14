@@ -1,0 +1,11 @@
+[build]
+  # Directory with the built files (relative to frontend folder)
+  publish = "build/web"
+  # No build command as we're using pre-built files
+  command = ""
+
+[[redirects]]
+  # Single Page App redirects - handles Flutter web routing
+  from = "/*"
+  to = "/index.html"
+  status = 200 
