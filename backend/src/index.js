@@ -6,9 +6,11 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['https://booking-system-coral.vercel.app', 'https://booking-system-frontend.netlify.app', '*'],
-  methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: '*',  // Allow all origins
+  methods: ['GET', 'POST', 'DELETE', 'OPTIONS', 'PUT'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  credentials: true,
+  optionsSuccessStatus: 204
 }));
 app.use(express.json());
 

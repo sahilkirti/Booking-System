@@ -26,16 +26,23 @@ class BookingService {
   }
 
   Future<Booking> createBooking(Booking booking) async {
-    final response = await http.post(
-      Uri.parse('$baseUrl/bookings'),
-      headers: {'Content-Type': 'application/json'},
-      body: json.encode(booking.toJson()),
-    );
+    try {
+      final response = await http.post(
+        Uri.parse('$baseUrl/bookings'),
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode(booking.toJson()),
+      );
 
-    if (response.statusCode == 201) {
-      return Booking.fromJson(json.decode(response.body)['data']);
-    } else {
-      throw Exception('Failed to create booking');
+      if (response.statusCode == 201 || response.statusCode == 200) {
+        print('Booking created successfully: ${response.body}');
+        return Booking.fromJson(json.decode(response.body)['data']);
+      } else {
+        print('Error creating booking: ${response.statusCode}, ${response.body}');
+        throw Exception('Failed to create booking: ${response.statusCode}, ${response.body}');
+      }
+    } catch (e) {
+      print('Exception during booking creation: $e');
+      throw Exception('Failed to create booking: $e');
     }
   }
 
